@@ -1,8 +1,9 @@
 package edu.eci.arsw.Ice2MeetU.entities;
 
-import org.springframework.data.annotation.Id;
+
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Objects;
 import java.util.UUID;
@@ -11,7 +12,7 @@ import java.util.UUID;
  * The type User.
  */
 @Entity
-@Table(name = "Usuario")
+@Table(name = "users")
 public class User {
 
     // <editor-fold defaultstate="collapsed" desc="Attributes">
