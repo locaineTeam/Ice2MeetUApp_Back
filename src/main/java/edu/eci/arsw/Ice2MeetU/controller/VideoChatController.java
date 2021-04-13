@@ -21,7 +21,7 @@ public class VideoChatController {
     public ResponseEntity<?> getToken(@RequestParam String identity, @RequestParam String room) {
 
         return new ResponseEntity<>(twilioTokenService.getToken(identity, room), HttpStatus.ACCEPTED);
-        
+
     }
 
 

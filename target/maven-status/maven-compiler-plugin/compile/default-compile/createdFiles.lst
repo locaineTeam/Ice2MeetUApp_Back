@@ -1,0 +1,17 @@
+edu\eci\arsw\Ice2MeetU\entities\Token.class
+edu\eci\arsw\Ice2MeetU\entities\Messages.class
+edu\eci\arsw\Ice2MeetU\entities\Video.class
+edu\eci\arsw\Ice2MeetU\persistence\impl\ChatPersistenceStub.class
+edu\eci\arsw\Ice2MeetU\persistence\ChatPersistence.class
+edu\eci\arsw\Ice2MeetU\repository\UserRepository.class
+edu\eci\arsw\Ice2MeetU\controller\ProfileController.class
+edu\eci\arsw\Ice2MeetU\App.class
+edu\eci\arsw\Ice2MeetU\entities\User.class
+edu\eci\arsw\Ice2MeetU\services\ChatService.class
+edu\eci\arsw\Ice2MeetU\controller\VideoChatController.class
+edu\eci\arsw\Ice2MeetU\controller\ChatController.class
+edu\eci\arsw\Ice2MeetU\controller\RegisterController.class
+edu\eci\arsw\Ice2MeetU\twilioToken\TwilioToken.class
+edu\eci\arsw\Ice2MeetU\controller\LoginController.class
+edu\eci\arsw\Ice2MeetU\services\impl\ChatServiceImpl.class
+edu\eci\arsw\Ice2MeetU\entities\Chat.class
