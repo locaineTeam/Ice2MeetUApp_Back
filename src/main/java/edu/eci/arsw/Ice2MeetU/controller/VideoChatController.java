@@ -18,8 +18,8 @@ public class VideoChatController {
 //    public ResponseEntity<?> getToken(@PathVariable String user) {
 //        return new ResponseEntity<>(twilioTokenService.getToken(user), HttpStatus.ACCEPTED);
 //    }
-    public ResponseEntity<?> getToken(@RequestParam String identity) {
-        return new ResponseEntity<>(twilioTokenService.getToken(identity), HttpStatus.ACCEPTED);
+    public ResponseEntity<?> getToken(@RequestParam String identity, @RequestParam String room) {
+        return new ResponseEntity<>(twilioTokenService.getToken(identity, room), HttpStatus.ACCEPTED);
     }
 
 

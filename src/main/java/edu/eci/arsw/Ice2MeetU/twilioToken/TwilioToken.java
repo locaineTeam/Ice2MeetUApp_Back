@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TwilioToken {
-    public Token getToken(String user){
+    public Token getToken(String user, String room){
 
         String twilioAccountSid = "AC4ac6afd395a417a6a61179945e8abef0";
         String twilioApiKey = "SKc346bdc0cabf5c15a9cb850024acd47a";
@@ -30,7 +30,7 @@ public class TwilioToken {
         grantVoice.setIncomingAllow(true);
 
 
-        VideoGrant grantVideo = new VideoGrant().setRoom("cool room");
+        VideoGrant grantVideo = new VideoGrant().setRoom(room);
 
         AccessToken token = new AccessToken.Builder(twilioAccountSid, twilioApiKey, twilioApiSecret)
                 .identity(identity).grant(grant).grant(grantVoice).grant(grantVideo).build();
