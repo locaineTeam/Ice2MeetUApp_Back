@@ -30,6 +30,8 @@ public class TokenCacheRedis implements ITokenCache {
         this.valueOperations = this.redisTemplate.opsForValue();
 
 
+        
+
     }
 
     @Override
