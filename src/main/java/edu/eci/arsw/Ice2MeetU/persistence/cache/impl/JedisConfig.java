@@ -19,6 +19,7 @@ public class JedisConfig {
     public RedisTemplate<String, Object> redisTemplate(){
         RedisTemplate<String,Object> template = new RedisTemplate<>();
         template.setConnectionFactory(jedisConnectionFactory());
+        template.setEnableTransactionSupport(true);
         return template;
 
     }
