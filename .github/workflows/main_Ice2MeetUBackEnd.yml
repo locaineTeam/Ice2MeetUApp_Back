@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'Ice2MeetUBackEnd'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_dc85ca7cbb17486583d35624335ef910 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4293aa45e4bf4b41965b7be4599b4e43 }}
         package: '*.jar'
