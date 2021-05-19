@@ -13,6 +13,7 @@ public class VideoChatController {
     @Autowired
    private TwilioToken twilioTokenService;
 
+    // <editor-fold defaultstate="collapsed" desc="Attributes">
     @RequestMapping(value="/getTwilioToken",method= RequestMethod.GET)
 
 //    public ResponseEntity<?> getToken(@PathVariable String user) {
@@ -23,6 +24,7 @@ public class VideoChatController {
         return new ResponseEntity<>(twilioTokenService.getToken(identity, room), HttpStatus.ACCEPTED);
 
     }
+    // </editor-fold>
 
 
 }
