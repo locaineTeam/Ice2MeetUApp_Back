@@ -30,13 +30,13 @@ public class MessagesController {
      */
 // <editor-fold defaultstate="collapsed" desc="Attributes">
     @RequestMapping(value="/command/{command}/language/{language}",method= RequestMethod.GET)
-    public ResponseEntity<?> getMessageByCommandAndLanguage(@PathVariable String command, @PathVariable String language) {
+    public String getMessageByCommandAndLanguage(@PathVariable String command, @PathVariable String language) {
 
         try {
             String message = commandMessages.getMessageByCommandAndLanguage(command,language);
-            return new ResponseEntity<>(message, HttpStatus.ACCEPTED);
+            return message;
         } catch (CommandMessagesException e) {
-            return new ResponseEntity<>("Command Not Found: " +e.getMessage(), HttpStatus.NOT_FOUND);
+            return "Command Not Found: "+e.getMessage();
         }
 
     }
