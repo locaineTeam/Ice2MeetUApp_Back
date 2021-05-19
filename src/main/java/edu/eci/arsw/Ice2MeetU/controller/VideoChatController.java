@@ -16,9 +16,7 @@ public class VideoChatController {
     // <editor-fold defaultstate="collapsed" desc="Attributes">
     @RequestMapping(value="/getTwilioToken",method= RequestMethod.GET)
 
-//    public ResponseEntity<?> getToken(@PathVariable String user) {
-//        return new ResponseEntity<>(twilioTokenService.getToken(user), HttpStatus.ACCEPTED);
-//    }
+
     public ResponseEntity<?> getToken(@RequestParam String identity, @RequestParam String room) {
 
         return new ResponseEntity<>(twilioTokenService.getToken(identity, room), HttpStatus.ACCEPTED);

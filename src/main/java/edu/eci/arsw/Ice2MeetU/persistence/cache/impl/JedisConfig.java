@@ -13,7 +13,7 @@ public class JedisConfig {
     @Bean
     JedisConnectionFactory jedisConnectionFactory(){
         RedisStandaloneConfiguration redisStandaloneConfiguration =
-                new RedisStandaloneConfiguration("70.37.64.238", 6379);
+                new RedisStandaloneConfiguration("13.85.31.35", 6379);
         return new JedisConnectionFactory(redisStandaloneConfiguration);
 
     }
