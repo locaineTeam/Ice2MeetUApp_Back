@@ -1,12 +1,12 @@
 package edu.eci.arsw.Ice2MeetU.services.impl;
 
+import edu.eci.arsw.Ice2MeetU.entities.CommandValue;
 import edu.eci.arsw.Ice2MeetU.entities.Commands;
 import edu.eci.arsw.Ice2MeetU.persistence.exceptions.CommandMessagesException;
 import edu.eci.arsw.Ice2MeetU.services.CommandMessageService;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
-import java.util.Locale;
 
 /**
  * The type Command message service.
@@ -47,12 +47,12 @@ public class CommandMessageServiceImpl implements CommandMessageService {
     }
 
     @Override
-    public String getMessageByCommandAndLanguage(String command, String language) throws CommandMessagesException {
+    public CommandValue getMessageByCommandAndLanguage(String command, String language) throws CommandMessagesException {
         command = command.toLowerCase();
         language = language.toLowerCase();
         if(!commands.containsKey(language)) throw new CommandMessagesException(CommandMessagesException.LANGUAGE_NO_FOUND,language);
         String message = commands.get(language).getMessageByCommand(command);
         if(message.equals("")) throw new CommandMessagesException(CommandMessagesException.COMMAND_NO_FOUND,command);
-        return message;
+        return new CommandValue(message);
     }
 }

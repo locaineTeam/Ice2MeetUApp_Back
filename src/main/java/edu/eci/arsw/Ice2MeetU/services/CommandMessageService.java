@@ -1,5 +1,6 @@
 package edu.eci.arsw.Ice2MeetU.services;
 
+import edu.eci.arsw.Ice2MeetU.entities.CommandValue;
 import edu.eci.arsw.Ice2MeetU.persistence.exceptions.CommandMessagesException;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +18,5 @@ public interface CommandMessageService {
      * @return the message by command and language
      * @throws CommandMessagesException the command messages exception
      */
-    public String getMessageByCommandAndLanguage(String command, String language) throws CommandMessagesException;
+    public CommandValue getMessageByCommandAndLanguage(String command, String language) throws CommandMessagesException;
 }
