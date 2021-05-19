@@ -11,10 +11,16 @@ import org.springframework.stereotype.Repository;
 import java.time.Duration;
 
 
+/**
+ * The type Token cache redis.
+ */
 @Repository
 @Qualifier("TokenCacheRedis")
 public class TokenCacheRedis implements ITokenCache {
 
+    /**
+     * The constant TOKEN_KEY.
+     */
     public static  final String TOKEN_KEY = "twilio_token";
 
     private HashOperations hashOperations;
@@ -23,6 +29,11 @@ public class TokenCacheRedis implements ITokenCache {
 
     private RedisTemplate redisTemplate;
 
+    /**
+     * Instantiates a new Token cache redis.
+     *
+     * @param redisTemplate the redis template
+     */
     public TokenCacheRedis(RedisTemplate redisTemplate){
 
         this.redisTemplate = redisTemplate;

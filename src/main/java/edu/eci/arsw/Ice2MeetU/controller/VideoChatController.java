@@ -6,6 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * The type Video chat controller.
+ */
 @RestController
 @RequestMapping("/")
 @CrossOrigin(origins = "*")
@@ -13,7 +16,14 @@ public class VideoChatController {
     @Autowired
    private TwilioToken twilioTokenService;
 
-    // <editor-fold defaultstate="collapsed" desc="Attributes">
+    /**
+     * Gets token.
+     *
+     * @param identity the identity
+     * @param room     the room
+     * @return the token
+     */
+// <editor-fold defaultstate="collapsed" desc="Attributes">
     @RequestMapping(value="/getTwilioToken",method= RequestMethod.GET)
 
 
