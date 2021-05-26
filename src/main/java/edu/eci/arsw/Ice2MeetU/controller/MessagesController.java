@@ -38,7 +38,7 @@ public class MessagesController {
             CommandValue message = commandMessages.getMessageByCommandAndLanguage(command,language);
             return new ResponseEntity<>(message, HttpStatus.ACCEPTED);
         } catch (CommandMessagesException e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(new CommandValue("Este Comando no Existe"), HttpStatus.ACCEPTED);
         }
 
     }
